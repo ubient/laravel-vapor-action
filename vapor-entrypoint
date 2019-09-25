@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+if [ -z ${VAPOR_API_TOKEN} ]; then
+    echo "To interact with Vapor directly from Github, you will need to add a VAPOR_API_TOKEN to your project secrets." >&2
+    echo "You may generate an API token in your Vapor API settings dashboard: https://vapor.laravel.com/app/account/api-tokens" >&2
+    exit 1
+fi
+
+php $COMPOSER_HOME/vendor/bin/vapor "$@" -vvv
+exit $?
