@@ -30,6 +30,7 @@ To keep things simple, let's set up an action that deploys to production as soon
 
 ```yaml
 name: Deploy to production
+
 on:
   push:
     branches:
