@@ -2,11 +2,11 @@
 
 [![Latest Version](https://img.shields.io/github/release/ubient/laravel-vapor-action.svg?style=flat-square)](https://github.com/ubient/laravel-vapor-action/releases)
 
-This package provides a way to use Laravel Vapor directly from Github Actions.
+This Github Action provides a way to directly use Laravel Vapor from within your CI pipeline.
 
 ## Requirements
 
-This Github Action has a few requirements. First and foremost, you will need to have Github Actions enabled for the account you're planning to use this action on.
+First and foremost, you will need to have Github Actions enabled for the account you're planning to use this action on.
 If you are not yet part of the beta, you can [sign up here](https://github.com/features/actions/signup/).
 
 Furthermore, you will need an active [Laravel Vapor](https://vapor.laravel.com) subscription.
@@ -14,7 +14,7 @@ Furthermore, you will need an active [Laravel Vapor](https://vapor.laravel.com) 
 ## Usage
 
 ### Setting up a Github Secret
-In order to authenticate with Vapor from Github Actions, we will need to add a `VAPOR_API_TOKEN` [secret](https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables).
+In order to authenticate with Vapor from Github Actions, we will need to add a `VAPOR_API_TOKEN` [secret](https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables) to your repository.
 To do so, you may do the following:
 1. On GitHub, navigate to the main page of the repository you intend to use this action on.
 2. Under your repository name, click `Settings`.
