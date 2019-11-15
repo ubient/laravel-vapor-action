@@ -9,6 +9,10 @@ LABEL com.github.actions.description="Run Laravel Vapor commands directly from G
 LABEL com.github.actions.icon="upload-cloud"
 LABEL com.github.actions.color="blue"
 
+# Install required extenstions for laravel 
+# https://laravel.com/docs/6.x#server-requirements
+RUN docker-php-ext-install bcmath xml tokenizer mbstring
+
 # Install Vapor + Prestissimo (parallel/quicker composer install)
 RUN set -xe && \
         composer global require hirak/prestissimo && \
