@@ -11,13 +11,14 @@ LABEL com.github.actions.color="blue"
 
 # Install required extenstions for laravel 
 # https://laravel.com/docs/6.x#server-requirements
-RUN docker-php-ext-install bcmath xml tokenizer mbstring
+RUN apk add libxml2-dev && \
+    docker-php-ext-install bcmath xml tokenizer mbstring
 
 # Install Vapor + Prestissimo (parallel/quicker composer install)
 RUN set -xe && \
-        composer global require hirak/prestissimo && \
-        composer global require laravel/vapor-cli && \
-        composer clear-cache
+    composer global require hirak/prestissimo && \
+    composer global require laravel/vapor-cli && \
+    composer clear-cache
 
 # Install Node.js (needed for Vapor's NPM Build)
 RUN apk add --update nodejs npm
