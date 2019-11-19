@@ -4,11 +4,6 @@ LABEL repository="https://github.com/ubient/laravel-vapor-action"
 LABEL homepage="https://github.com/ubient/laravel-vapor-action"
 LABEL maintainer="Claudio Dekker <claudio@ubient.net>"
 
-LABEL com.github.actions.name="Laravel Vapor"
-LABEL com.github.actions.description="Run Laravel Vapor commands directly from Github Actions"
-LABEL com.github.actions.icon="upload-cloud"
-LABEL com.github.actions.color="blue"
-
 # Install required extenstions for laravel 
 # https://laravel.com/docs/6.x#server-requirements
 RUN apk add libxml2-dev && \
