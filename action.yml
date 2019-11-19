@@ -1,0 +1,9 @@
+name: 'Laravel Vapor'
+description: 'Run Laravel Vapor commands directly from Github Actions'
+author: 'Claudio Dekker <claudio@ubient.net>'
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
