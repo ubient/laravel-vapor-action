@@ -47,6 +47,7 @@ jobs:
 ```
 
 > **Note**: To speed up and cache builds, as well as allow for more customization, we suggest (using these very similar instructions instead)[#advanced-usage]
+
 > **Note**: To find out more regarding this syntax, you can take a look at [this page](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#onevent_nametypes).
 
 #### Explanation
