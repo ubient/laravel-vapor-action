@@ -14,7 +14,7 @@ To use this Github Action, you will need an active [Laravel Vapor](https://vapor
 ## Usage
 
 ### 1. Setting up a Github Secret
-In order to authenticate with Vapor from Github Actions, we will need to add a `VAPOR_API_TOKEN` [secret](https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables) to your repository.
+In order to authenticate with Vapor from Github Actions, we will need to add a `VAPOR_API_TOKEN` [secret](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#creating-encrypted-secrets) to your repository.
 To do so, you may do the following:
 1. On GitHub, navigate to the main page of the repository you intend to use this action on.
 2. Under your repository name, click `Settings`.
