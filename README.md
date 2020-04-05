@@ -3,7 +3,9 @@
 [![Latest Version](https://img.shields.io/github/release/ubient/laravel-vapor-action.svg?style=flat-square)](https://github.com/ubient/laravel-vapor-action/releases)
 
 This Github Action provides a way to directly use Laravel Vapor from within your CI pipeline.
-Need anything beyond the default extensions necessary for Laravel, or want to optimize for build speed? [We've got you covered](#advanced-usage)
+
+
+Need anything beyond the default extensions necessary for Laravel, or **want to optimize for build speed**? [We've got you covered](#advanced-usage)
 
 ## Requirements
 
@@ -46,9 +48,7 @@ jobs:
         args: "deploy production"
 ```
 
-> **Note**: To speed up and cache builds, as well as allow for more customization, we suggest [using these very similar instructions instead](#advanced-usage)
-
-> **Note**: To find out more regarding this syntax, you can take a look at [this page](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#onevent_nametypes).
+:fire: To speed things up significantly and allow for customization, we suggest [following these instructions instead](#advanced-usage). If you would like to find out more regarding the above syntax, you can take a look at [this page](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#onevent_nametypes).
 
 #### Explanation
 
@@ -61,7 +61,7 @@ The above does a few things:
 
 ## Advanced usage
 Need something extra, such as a different PHP version or additional PHP extensions? That's possible!
-Set up a Github Secret [like previously described](#setting-up-our-github-action), but use the following instead when creating an Actions workflow:
+[Set up a Github Secret like previously described](#setting-up-a-github-secret), but use the following instead when creating an Actions workflow:
 
 ```yaml
 name: Deploy to Production
