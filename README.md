@@ -60,7 +60,7 @@ If you would like to find out more regarding the syntax used by Github Actions, 
 
 
 ## Advanced usage
-Need something extra, such as a different PHP version or additional PHP extensions? That's possible!\
+Need something extra, such as caching, a different PHP version or additional PHP extensions? That's possible!\
 [Set up a Github Secret like previously described](#1-setting-up-a-github-secret), but use the following instead when creating an Actions workflow:
 
 ```yaml
