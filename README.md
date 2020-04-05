@@ -2,10 +2,8 @@
 
 [![Latest Version](https://img.shields.io/github/release/ubient/laravel-vapor-action.svg?style=flat-square)](https://github.com/ubient/laravel-vapor-action/releases)
 
-This Github Action provides a way to directly use Laravel Vapor from within your CI pipeline.
-
-
-Need anything beyond the default extensions necessary for Laravel, or **want to optimize for build speed**? [We've got you covered](#advanced-usage)
+This Github Action provides a way to directly use Laravel Vapor from within your CI pipeline.\
+Need anything beyond the default extensions necessary for Laravel, or **want to optimize for build speed**? [We've got you covered](#advanced-usage).
 
 ## Requirements
 
