@@ -13,7 +13,7 @@ To use this Github Action, you will need an active [Laravel Vapor](https://vapor
 
 ## Usage
 
-### Setting up a Github Secret
+### 1. Setting up a Github Secret
 In order to authenticate with Vapor from Github Actions, we will need to add a `VAPOR_API_TOKEN` [secret](https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables) to your repository.
 To do so, you may do the following:
 1. On GitHub, navigate to the main page of the repository you intend to use this action on.
@@ -24,7 +24,7 @@ To do so, you may do the following:
 6. For the value itself, enter your Laravel Vapor API token. You may generate one in your  [Vapor API settings dashboard](https://vapor.laravel.com/app/account/api-tokens).
 7. Click `Add secret`.
 
-### Setting up our Github Action
+### 2. Setting up our Github Action
 Next, let's head over to the `Actions` page, and create a new workflow.
 To keep things simple, let's set up an action that deploys to production as soon as a branch is merged into master:
 
@@ -48,7 +48,7 @@ jobs:
         args: "deploy production"
 ```
 
-:fire: To speed things up significantly and allow for customization, we suggest [following these instructions instead](#advanced-usage). If you would like to find out more regarding the above syntax, you can take a look at [this page](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#onevent_nametypes).
+:fire: To speed things up significantly and allow for customization, we highly recommend [using this workflow instead](#advanced-usage).
 
 #### Explanation
 
@@ -58,10 +58,12 @@ The above does a few things:
 3. It runs the built container, passing in the Vapor API token previously configured in your repository's Github Secrets.
 4. It executes the `vapor` CLI command, passing in the arguments given. In our example, this means it runs `vapor deploy production`.
 
+If you would like to find out more regarding the syntax used by Github Actions, you can take a look at [this page](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#onevent_nametypes).
+
 
 ## Advanced usage
 Need something extra, such as a different PHP version or additional PHP extensions? That's possible!
-[Set up a Github Secret like previously described](#setting-up-a-github-secret), but use the following instead when creating an Actions workflow:
+[Set up a Github Secret like previously described](#1-setting-up-a-github-secret), but use the following instead when creating an Actions workflow:
 
 ```yaml
 name: Deploy to Production
@@ -86,7 +88,7 @@ jobs:
           extensions: bcmath, ctype, fileinfo, json, mbstring, openssl, pdo, tokenizer, xml
           coverage: none
 
-      - name: Get Composer cache directory
+      - name: Obtain Composer cache directory
         id: composer-cache
         run: echo "::set-output name=dir::$(composer config cache-files-dir)"
 
@@ -105,7 +107,7 @@ jobs:
       - name: Install Composer dependencies
         run: composer install --no-progress --no-suggest --prefer-dist --optimize-autoloader
 
-      - name: Get NPM Cache directory (used by Laravel Mix)
+      - name: Obtain NPM Cache directory (used by Laravel Mix)
         id: node-cache-dir
         run: echo "::set-output name=dir::$(npm config get cache)" # Use $(yarn cache dir) for yarn
 
