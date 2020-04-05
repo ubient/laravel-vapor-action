@@ -12,7 +12,7 @@ To use this Github Action, you will need an active [Laravel Vapor](https://vapor
 ## Usage
 
 ### 1. Setting up a Github Secret
-In order to authenticate with Vapor from Github Actions, we will need to add a `VAPOR_API_TOKEN` [secret](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#creating-encrypted-secrets) to your repository.
+In order to authenticate with Vapor from Github Actions, we will need to add a `VAPOR_API_TOKEN` [secret](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#creating-encrypted-secrets) to your repository.\
 To do so, you may do the following:
 1. On GitHub, navigate to the main page of the repository you intend to use this action on.
 2. Under your repository name, click `Settings`.
@@ -23,7 +23,7 @@ To do so, you may do the following:
 7. Click `Add secret`.
 
 ### 2. Setting up our Github Action
-Next, let's head over to the `Actions` page, and create a new workflow.
+Next, let's head over to the `Actions` page, and create a new workflow.\
 To keep things simple, let's set up an action that deploys to production as soon as a branch is merged into master:
 
 ```yaml
@@ -60,7 +60,7 @@ If you would like to find out more regarding the syntax used by Github Actions, 
 
 
 ## Advanced usage
-Need something extra, such as a different PHP version or additional PHP extensions? That's possible!
+Need something extra, such as a different PHP version or additional PHP extensions? That's possible!\
 [Set up a Github Secret like previously described](#1-setting-up-a-github-secret), but use the following instead when creating an Actions workflow:
 
 ```yaml
