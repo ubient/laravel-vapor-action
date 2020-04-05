@@ -111,7 +111,7 @@ jobs:
         id: node-cache-dir
         run: echo "::set-output name=dir::$(npm config get cache)" # Use $(yarn cache dir) for yarn
 
-      - name: Cache NPM dependencies (used by Laravel Mix) # Important: Don't cache the node_modules folder!
+      - name: Cache NPM dependencies (used by Laravel Mix)
         uses: actions/cache@v1
         with:
           path: ${{ steps.node-cache-dir.outputs.dir }}
