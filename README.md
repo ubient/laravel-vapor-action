@@ -21,6 +21,7 @@ To do so, you may do the following:
 5. For the name of your secret, enter `VAPOR_API_TOKEN`.
 6. For the value itself, enter your Laravel Vapor API token. You may generate one in your  [Vapor API settings dashboard](https://vapor.laravel.com/app/account/api-tokens).
 7. Click `Add secret`.
+![Example of the Project Settings Secrets page](/images/project-settings-secrets.png)
 
 ### 2. Setting up our Github Action
 Next, let's head over to the `Actions` page, and create a new workflow.\
