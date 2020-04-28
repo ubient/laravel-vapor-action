@@ -44,7 +44,7 @@ jobs:
       env:
         VAPOR_API_TOKEN: ${{ secrets.VAPOR_API_TOKEN }}
       with:
-        args: "deploy production"
+        args: "deploy production --commit="${{ github.sha }}"
 ```
 
 :fire: To speed things up significantly and allow for customization, we highly recommend [using this workflow instead](#advanced-usage).
@@ -120,7 +120,7 @@ jobs:
       - name: Deploy using Laravel Vapor
         env:
           VAPOR_API_TOKEN: ${{ secrets.VAPOR_API_TOKEN }}
-        run: /home/runner/.composer/vendor/bin/vapor deploy production
+        run: /home/runner/.composer/vendor/bin/vapor deploy production --commit="${{ github.sha }}
 ```
 
 Using the above (and triggering the build twice in a row), we found our sequential builds to be more than a whole minute faster on average!
