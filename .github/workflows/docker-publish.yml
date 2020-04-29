@@ -1,3 +1,5 @@
+# Based on https://github.com/actions/starter-workflows/blob/master/ci/docker-publish.yml
+
 name: Docker
 
 on:
@@ -7,7 +9,7 @@ on:
       - master
 
     # Publish tags as releases.
-    tags: 
+    tags:
       - "**"
 
   # Run tests for any PRs.
@@ -56,7 +58,7 @@ jobs:
       - name: Push image
         run: |
           IMAGE_ID=docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME
-          
+
           # Change all uppercase to lowercase
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
 
