@@ -1,4 +1,4 @@
-FROM composer:1.9.0
+FROM composer:1.9.3
 
 LABEL repository="https://github.com/ubient/laravel-vapor-action"
 LABEL homepage="https://github.com/ubient/laravel-vapor-action"
