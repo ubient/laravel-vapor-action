@@ -12,3 +12,6 @@ All notable changes to `ubient/laravel-vapor-action` will be documented in this 
 ## 1.2.0 - 2020-04-29
 - Added automatic Docker Image building, tagging & publishing.
 - Added Docker Image method (allowing for the most performant build times so far!)
+
+## 1.2.1 - 2020-06-15
+- Fixed PHP 7.4 support due to missing oniguruma library (required by PHP mbstring)
