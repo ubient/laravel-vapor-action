@@ -4,8 +4,7 @@
 
 This Github Action provides a way to directly use Laravel Vapor from within your CI/CD pipeline.
 
-Need anything beyond the default extensions necessary for Laravel, or a custom PHP version? [We've got you covered](#advanced-usage).\
-Alternatively, to optimize for speed, you can also use our [automatically built Docker image](#optimize-for-speed-using-the-docker-image). :fire:
+Need anything beyond the default extensions, or a custom PHP version? [We've got you covered](#advanced-usage). Alternatively, you can use our [automatically built Docker image](#optimize-for-speed-using-the-docker-image) to optimize for faster deployments. :fire:
 
 ## Requirements
 
@@ -42,7 +41,7 @@ jobs:
     name: Check out, build and deploy using Vapor
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - uses: ubient/laravel-vapor-action@master
       env:
         VAPOR_API_TOKEN: ${{ secrets.VAPOR_API_TOKEN }}
@@ -78,7 +77,7 @@ jobs:
     name: Check out and deploy using Vapor
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Login to Github Package Registry
       run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
     - name: Deploy to Production
