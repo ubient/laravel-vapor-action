@@ -8,5 +8,6 @@ if [ -z ${VAPOR_API_TOKEN} ]; then
     exit 1
 fi
 
+composer global require laravel/vapor-cli --no-interaction --prefer-dist --quiet
 php $COMPOSER_HOME/vendor/bin/vapor "$@" -vvv
 exit $?
